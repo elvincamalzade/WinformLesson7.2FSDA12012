@@ -47,6 +47,7 @@
             this.figureCombobox.Name = "figureCombobox";
             this.figureCombobox.Size = new System.Drawing.Size(149, 33);
             this.figureCombobox.TabIndex = 0;
+            this.figureCombobox.SelectedIndexChanged += new System.EventHandler(this.figureCombobox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -65,6 +66,7 @@
             this.widthTxtb.Name = "widthTxtb";
             this.widthTxtb.Size = new System.Drawing.Size(100, 31);
             this.widthTxtb.TabIndex = 2;
+            this.widthTxtb.Text = "100";
             // 
             // label2
             // 
@@ -83,6 +85,7 @@
             this.heightTxtb.Name = "heightTxtb";
             this.heightTxtb.Size = new System.Drawing.Size(100, 31);
             this.heightTxtb.TabIndex = 4;
+            this.heightTxtb.Text = "100";
             // 
             // label3
             // 
@@ -104,6 +107,7 @@
             this.selectBtn.TabIndex = 6;
             this.selectBtn.Text = "Select";
             this.selectBtn.UseVisualStyleBackColor = true;
+            this.selectBtn.Click += new System.EventHandler(this.selectBtn_Click);
             // 
             // fillRadiobtn
             // 
@@ -133,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1116, 592);
+            this.ClientSize = new System.Drawing.Size(1112, 592);
             this.Controls.Add(this.emptyRadiobtn);
             this.Controls.Add(this.fillRadiobtn);
             this.Controls.Add(this.selectBtn);
@@ -145,6 +149,8 @@
             this.Controls.Add(this.figureCombobox);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 
